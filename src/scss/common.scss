@@ -1,0 +1,153 @@
+@import url('https://cdn.jsdelivr.net/npm/pretendard/dist/web/static/pretendard.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 400;
+  line-height: 1;
+}
+
+ul, ol, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@for $i from 1 through 9 {
+  .fw-#{$i * 100} {
+    font-weight: #{$i * 100};
+  }
+}
+
+$font-sizes: 12, 14, 16, 18, 20, 24, 30, 36, 48;
+
+@each $size in $font-sizes {
+  .fs-#{$size} {
+    font-size: #{$size}px;
+  }
+}
+
+// ======================
+$bg-default: #fff;
+$bg-v2: #eee;
+$bg-v3: #ddd;
+$bg-dark-default: #2b2b2b;
+$text-color-default: #333;
+$text-color-white: #fff;
+$text-color-v2: #454545;
+$text-color-v3: #666;
+$text-color-v4: #999;
+$text-color-v5: #aaa;
+$text-color-v6: #ccc;
+$text-color-v7: #eee;
+$brand-color: #fff100;
+$brand-color-hover: #FFDD00;
+$border-radius-default: 0.375rem;
+
+//====================
+#header {
+  padding: 10px 0;
+  background-color: $bg-default;
+  min-height: 60px;
+  .navmenu a {
+    display: inline-block;
+    color: $text-color-default;
+    min-height: 60px;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    transition: 0.3s;
+    &:hover {
+      color: $text-color-v4;
+    }
+  }
+  .btnwrap {
+    gap: .25rem;
+  }
+}
+#logo {
+  width: auto;
+}
+#footer-logo {
+  width: 100px;
+}
+#footer {
+  padding: 50px 0;
+  background-color: $bg-dark-default;
+  color: $text-color-white;
+  .social-links a {
+    display: inline-block;
+    color: #fff;
+    opacity: 0.4;
+    text-align: center;
+    line-height: 24px;
+    width: 24px;
+    height: 24px;
+    font-size: 20px;
+    margin-right: 5px;
+    transition: 0.3s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .footer-contact {
+    font-size: 10px;
+    line-height: 1.5;
+    font-weight: 200;
+
+    p {
+      color: $text-color-white;
+      margin-bottom: 5px;
+    }
+  }
+  .footer-links {
+    margin-bottom: 30px;
+    font-weight: 200;
+
+    ul li {
+      padding: 5px 0;
+      display: flex;
+      align-items: center;
+      a {
+        font-size: 10px;
+        color: $text-color-v5;
+        &:hover {
+          color: $brand-color;
+        }
+      }
+    }
+  }
+  .customer-service {
+    h4 {
+      font-size: 16px;
+      padding-bottom: 12px;
+    }
+    ul li {
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: $text-color-white;
+      padding: 5px 0;
+      display: flex;
+      align-items: center;
+      font-weight: 200;
+
+      a {
+        color: $text-color-white;
+        &:hover {
+          color: $brand-color;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
